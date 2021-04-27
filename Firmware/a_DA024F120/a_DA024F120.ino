@@ -15,7 +15,7 @@
 
 //#######_USER VARIABLES_#######
 const byte pp = 7;                             //BLDC motor number of pole pairs
-const float phaseRes = 0.560;                  //Phase winding resistance [ohms]
+const float phaseRes = 1.0;                  //Phase winding resistance [ohms]
 const float sourceVoltage = 12;                //Voltage of your power source [Volts]
 const float maxPowersourceCurrent = 3.0;       //Very rough approximation of max current from the power source [Amps]
                                                //This is not the phase current through the motor.
@@ -78,7 +78,7 @@ const float overTempTime = 3;       // Time in an over-temperature senario to di
 const float sensorOffset = 0.0;     // Position offset, used to define an absolute 0 position on the motor's rotor [rads]
 const int motionDownSample = 0;     // Downsample the motion control loops with respect to the torque control loop [amount of loops]
 const int callerFixedFreq = 5;      // Frequency of the fixed rate function caller in void loop [hertz]
-const float alignStrength = 0.5;    // Percentage of power used to calibrate the sensor on start-up
+const float alignStrength = 1.5;    // Percentage of power used to calibrate the sensor on start-up
 char motorID = 'M';                 // Motor ID used for the commander interface, can be any character 
                                     // (a unique ID is useful for multi-board proyects)
 bool trueTorque = true;             // True torque mode, current sensing or voltage control mode.
